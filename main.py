@@ -1,4 +1,4 @@
-def to_hms(seconds):
+def to_hms(seconds: int) -> list:
     """
     Converts seconds to hours, minutes, and seconds, and returns it as a list.
 
