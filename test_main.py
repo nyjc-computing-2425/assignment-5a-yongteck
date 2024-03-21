@@ -8,7 +8,7 @@ from main import *
 class TestAssignment(unittest.TestCase):
 
     def test_str_raises_error(self):
-        errmsg = "Unsupported input type"
+        errmsg = "Unsupported input type."
         capturedOutput = io.StringIO()
         sys.stdout = capturedOutput
         to_hms("10")
@@ -84,9 +84,9 @@ class TestAssignment(unittest.TestCase):
         )
 
     def test_docstrings(self):
-    for func in [to_hms]:
-        self.assertIs(hasattr(func, "__doc__"), True)
-        self.assertTrue(func.__doc__, f"{func.__name__}() does not have a docstring")
+        for func in [to_hms]:
+            self.assertIs(hasattr(func, "__doc__"), True)
+            self.assertTrue(func.__doc__, f"{func.__name__}() does not have a docstring")
 
 
 if __name__ == '__main__':
