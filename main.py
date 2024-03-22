@@ -1,4 +1,4 @@
-def to_hms(seconds: int) -> list:
+def to_hms(seconds):
     """
     Converts seconds to hours, minutes, and seconds, and returns it as a list.
 
@@ -21,5 +21,11 @@ def to_hms(seconds: int) -> list:
     [1, 59, 59]
     """
     # Type your code below
-    pass
+    if isinstance(seconds, int):
+      ls = [0,0,0]
+      ls[1],ls[0] = divmod(seconds,60)
+      ls[2],ls[1] = divmod(ls[1],60)
+      return ls
+    else:
+      print("Unsupported input type.")
 
